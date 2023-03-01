@@ -37,7 +37,7 @@ app.use("/files", (req, res,next)=>{
     console.log()
     req.url = req.url.split("?")[0]
     var fPathRaw = req.url.split("/").filter(Boolean);
-    var filePath = path.join(packsDir, fPathRaw.join("\\"))
+    var filePath = path.join(packsDir, fPathRaw.join("/"))
     var fileStat = fs.statSync(filePath)
     if (fileStat.isFile()){
         if (req.query.download){
