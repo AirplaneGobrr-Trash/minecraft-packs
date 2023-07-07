@@ -14,7 +14,7 @@ const apiBASE = axios.create({
     baseURL: `${baseURL}/${version}`
 })
 
-class api {
+class API {
     /**
      * 
      * @param {String} token eternal token, https://eternal.overwolf.com 
@@ -68,7 +68,7 @@ class api {
 }
 
 function output(token){
-    return new api(token);
+    return new API(token);
 }
 
 module.exports = output
